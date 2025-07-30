@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import CategoryScreen from './components/CategoryScreen';
-import GameScreen from './components/GameScreen';
-import GameOverScreen from './components/GameOverScreen';
+import CategoryScreen from './components/CategoryScreen.jsx';
+import GameScreen from './components/GameScreen.jsx';
+import GameOverScreen from './components/GameOverScreen.jsx';
 import './App.css';
 
 function App() {

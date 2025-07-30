@@ -188,15 +188,16 @@ class EmojiMatcher {
 
         if (emoji1 === emoji2) {
             // Match found!
+            // Update score immediately
+            this.matchedPairs++;
+            this.currentScore += 10;
+            this.updateScoreDisplay();
+            
             setTimeout(() => {
                 tile1.classList.remove('clicked');
                 tile2.classList.remove('clicked');
                 tile1.classList.add('matched');
                 tile2.classList.add('matched');
-                
-                this.matchedPairs++;
-                this.currentScore += 10;
-                this.updateScoreDisplay();
                 
                 this.setGameStatus('Great match! +10 points');
                 
@@ -233,6 +234,7 @@ class EmojiMatcher {
         // Bonus points for remaining time
         const timeBonus = this.timeLeft * 2;
         this.currentScore += timeBonus;
+        this.updateScoreDisplay();
         
         this.setGameStatus(`Congratulations! You won! Time bonus: +${timeBonus} points`);
         
