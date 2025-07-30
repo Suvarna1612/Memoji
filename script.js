@@ -231,12 +231,7 @@ class EmojiMatcher {
         this.gameActive = false;
         this.clearTimer();
         
-        // Bonus points for remaining time
-        const timeBonus = this.timeLeft * 2;
-        this.currentScore += timeBonus;
-        this.updateScoreDisplay();
-        
-        this.setGameStatus(`Congratulations! You won! Time bonus: +${timeBonus} points`);
+        this.setGameStatus(`Congratulations! You won!`);
         
         setTimeout(() => {
             this.showGameOverScreen();
