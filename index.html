@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji Matcher - Arcade Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Category Selection Screen -->
+        <div id="category-screen" class="screen active">
+            <div class="header">
+                <h1 class="game-title">🎮 Memoji</h1>
+                <p class="subtitle">Choose your emoji category to start playing!</p>
+            </div>
+            
+            <div class="categories-grid">
+                <div class="category-card" data-category="expressions">
+                    <div class="category-icon">😀</div>
+                    <h3>Expressions</h3>
+                    <p>Faces & emotions</p>
+                </div>
+                
+                <div class="category-card" data-category="food">
+                    <div class="category-icon">🍕</div>
+                    <h3>Food</h3>
+                    <p>Delicious treats</p>
+                </div>
+                
+                <div class="category-card" data-category="nature">
+                    <div class="category-icon">🌿</div>
+                    <h3>Nature</h3>
+                    <p>Plants & animals</p>
+                </div>
+                
+                <div class="category-card" data-category="sports">
+                    <div class="category-icon">⚽</div>
+                    <h3>Sports</h3>
+                    <p>Sports & activities</p>
+                </div>
+                
+                <div class="category-card" data-category="travel">
+                    <div class="category-icon">✈️</div>
+                    <h3>Travel</h3>
+                    <p>Places & transport</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="game-screen" class="screen">
+            <div class="game-header">
+                <div class="game-info">
+                    <h2 id="category-title">Emoji Matcher</h2>
+                    <button id="back-btn" class="btn-secondary">← Back to Categories</button>
+                </div>
+                
+                <div class="score-board">
+                    <div class="score-item">
+                        <span class="score-label">Score:</span>
+                        <span id="current-score">0</span>
+                    </div>
+                    <div class="score-item">
+                        <span class="score-label">Time:</span>
+                        <span id="timer">60</span>s
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-controls">
+                <button id="start-btn" class="btn-primary">Start Game</button>
+                <button id="reset-btn" class="btn-secondary">Reset</button>
+            </div>
+
+            <div id="game-board" class="game-board"></div>
+
+            <div id="game-status" class="game-status"></div>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="gameover-screen" class="screen">
+            <div class="gameover-content">
+                <h2>🎉 Game Over!</h2>
+                <div class="final-score">
+                    <p>Your Score: <span id="final-score">0</span></p>
+                    <p id="high-score-message"></p>
+                </div>
+                <div class="gameover-actions">
+                    <button id="play-again-btn" class="btn-primary">Play Again</button>
+                    <button id="change-category-btn" class="btn-secondary">Change Category</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
