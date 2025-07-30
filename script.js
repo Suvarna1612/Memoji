@@ -64,7 +64,6 @@ class EmojiMatcher {
         document.getElementById('reset-btn').addEventListener('click', () => this.resetGame());
         document.getElementById('back-btn').addEventListener('click', () => this.goBackToCategories());
         
-        // Game over actions
         document.getElementById('play-again-btn').addEventListener('click', () => this.playAgain());
         document.getElementById('change-category-btn').addEventListener('click', () => this.goBackToCategories());
     }
